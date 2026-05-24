@@ -21,10 +21,10 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
 
       - name: Grant execute permission
-        run: chmod +x ./PrivacyShield/gradlew
+        run: chmod +x ./gradlew
 
       - name: Build Debug APK
-        run: cd PrivacyShield && ./gradlew assembleDebug --stacktrace
+        run: ./gradlew assembleDebug --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
